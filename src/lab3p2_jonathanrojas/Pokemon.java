@@ -75,7 +75,7 @@ public class Pokemon {
 
     @Override
     public String toString() {
-        return "Pokemon :" + "numeroPokedex=" + numeroPokedex + ", nombre=" + nombre + ", tipo=" + tipo + ", nivel=" + nivel + ", puntosSalud=" + puntosSalud + ", capturado=" + capturado + '.';
+        return "Pokemon : " + "numeroPokedex: " + numeroPokedex + ", nombre: " + nombre + ", tipo: " + tipo + ", nivel=" + nivel + ", PS: " + puntosSalud + ", capturado: " + capturado + '.';
     }
     public String evaluarPoder(){
         if(nivel<=20){
@@ -87,5 +87,10 @@ public class Pokemon {
             
         }
     }// fin de el evaluar
-    
+    public void entrenar(){
+        if(nivel<100){
+            nivel++;
+        }
+        puntosSalud=puntosSalud*0.005;
+    }
 }

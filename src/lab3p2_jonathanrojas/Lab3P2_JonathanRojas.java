@@ -32,6 +32,7 @@ public class Lab3P2_JonathanRojas {
                     mostrarPokedex();
                     break;
                 case 3:
+                    buscarPokemon();
                     break;
                 case 4:
                     break;
@@ -110,8 +111,19 @@ public class Lab3P2_JonathanRojas {
         boolean encontrado=false;
         for (int i = 0; i < pokemons.size(); i++) {
             if(pokemons.get(i).getNumeroPokedex()==numero){
-                System.out.println(""); 
+                System.out.println(pokemons.get(i));
+                System.out.println("Rango de poder evaluado: "+pokemons.get(i).evaluarPoder());
+                encontrado=true;
             }
         }
+        if(encontrado==false){
+            System.out.println("Pokemon no encontrado");
+        }
+    }// fin de el metodo
+    public static void entrenarPokemon(){
+        System.out.println("Entrenar pokemon ");
+        System.out.println("Ingrese el numero de pokedex del pokemon a buscar ");
+        int numero=entrada.nextInt();
+        
     }
 }// fin de la clase 
