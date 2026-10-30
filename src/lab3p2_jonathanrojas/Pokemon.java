@@ -72,6 +72,20 @@ public class Pokemon {
     public void setCapturado(boolean capturado) {
         this.capturado = capturado;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Pokemon :" + "numeroPokedex=" + numeroPokedex + ", nombre=" + nombre + ", tipo=" + tipo + ", nivel=" + nivel + ", puntosSalud=" + puntosSalud + ", capturado=" + capturado + '.';
+    }
+    public String evaluarPoder(){
+        if(nivel<=20){
+            return "principiante";
+        }else if(nivel<=50){
+            return "intermedio";
+        }else{
+            return "elite";
+            
+        }
+    }// fin de el evaluar
     
 }
