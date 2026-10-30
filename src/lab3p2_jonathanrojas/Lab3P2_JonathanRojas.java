@@ -38,8 +38,10 @@ public class Lab3P2_JonathanRojas {
                     entrenarPokemon();
                     break;
                 case 5:
+                    capturado();
                     break;
                 case 6:
+                    reportePokedex();
                     break;
                 case 7:
                     System.out.println("Saliendo de el programa ");
@@ -158,8 +160,10 @@ public class Lab3P2_JonathanRojas {
             if(pokemon.getNivel()<menor.getNivel()){
                 menor=pokemon;
             }
+            sumaniveles+=pokemon.getNivel();
             
-                
         }
+        double promedio=(double)sumaniveles/pokemons.size();
+        // incompleto
     }// fin de el metodo reporte
 }// fin de la clase 
