@@ -134,5 +134,32 @@ public class Lab3P2_JonathanRojas {
                 encontrado=true;
             }
         }
-    }
+        if(encontrado==false){
+            System.out.println("pokemon no encontrado ");
+        }
+    }// fin de el metodo entrenar
+    public static void capturado(){
+        
+    }// fin de el metodo capturado
+    public static void reportePokedex(){
+        System.out.println("Reporte pokemon");
+        if(pokemons.isEmpty()){
+            System.out.println("No hay pokemons registrados");
+            return;
+        }
+        Pokemon mayor=pokemons.get(0);
+        Pokemon menor=pokemons.get(0);
+        int sumaniveles=0;
+        for (int i = 0; i < pokemons.size(); i++) {
+            Pokemon pokemon=pokemons.get(i);
+            if(pokemon.getNivel()>mayor.getNivel()){
+                mayor=pokemon;
+            }
+            if(pokemon.getNivel()<menor.getNivel()){
+                menor=pokemon;
+            }
+            
+                
+        }
+    }// fin de el metodo reporte
 }// fin de la clase 
