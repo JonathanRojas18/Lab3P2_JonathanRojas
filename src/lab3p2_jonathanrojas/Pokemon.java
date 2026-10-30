@@ -91,6 +91,6 @@ public class Pokemon {
         if(nivel<100){
             nivel++;
         }
-        puntosSalud=puntosSalud*0.005;
+        puntosSalud=puntosSalud+puntosSalud*0.05;
     }
 }

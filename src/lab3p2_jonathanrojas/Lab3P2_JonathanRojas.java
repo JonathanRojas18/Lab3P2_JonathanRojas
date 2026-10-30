@@ -35,6 +35,7 @@ public class Lab3P2_JonathanRojas {
                     buscarPokemon();
                     break;
                 case 4:
+                    entrenarPokemon();
                     break;
                 case 5:
                     break;
@@ -124,6 +125,14 @@ public class Lab3P2_JonathanRojas {
         System.out.println("Entrenar pokemon ");
         System.out.println("Ingrese el numero de pokedex del pokemon a buscar ");
         int numero=entrada.nextInt();
-        
+        boolean encontrado=false;
+        for (int i = 0; i < pokemons.size(); i++) {
+            if(pokemons.get(i).getNumeroPokedex()==numero){
+                pokemons.get(i).entrenar();
+                System.out.println("Entrenamiento completado ");
+                System.out.println(numero+"ahora es nivel "+pokemons.get(i).getNivel()+"con "+pokemons.get(i).getPuntosSalud()+" PS.");
+                encontrado=true;
+            }
+        }
     }
 }// fin de la clase 
